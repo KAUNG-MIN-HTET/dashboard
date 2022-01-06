@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Item Add</title>
+    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="vendor/fontawesomepro/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+
+        .list-active{
+            background-color: var(--primary);
+            color: #ffffff;
+        }
+        .list-group-item:first-child {
+            border-top-left-radius: 3px;
+            border-top-right-radius: 3px;
+        }
+        .list-group-item:last-child {
+            border-bottom-right-radius: 3px;
+            border-bottom-left-radius: 3px;
+        }
+        .list-active:hover {
+            color: #ffffff;
+            background-color: var(--primary);
+        }
+
+    </style>
+</head>
+<body>
+    
+    <section class="container-fluid">
+        <div class="row">
+            <!-- navigation side-bar -->
+            <div class="col-12 col-lg-3 col-xl-2 vh-100 navigation">
+                <div class="d-flex justify-content-between align-items-center p-2 logo" style="margin-top: 8px;">
+                <p class="fw-bold m-0 h4 text-pri">Menu</p>
+                <button class="btn btn-light hide-navigation d-lg-none">
+                    <i class="fas fa-times"></i>
+                </button>
+                </div>
+                <!--list start-->
+                <div class="list-group list-group-flush mb-3">
+                    <a href="index.html" class="list-group-item">
+                    <i class="fas fa-home"></i>
+                    Dashboard
+                    </a>
+                </div>
+                <!--span list start-->
+                <!-- <div class="list-group list-group-flush mb-3">
+                    <a href="" class="list-group-item disabled ps-2">Manage Dashboard</a>
+                    <a href="#" class="list-group-item list-group-item-action"><i class="fal fa-plus-circle me-1"></i>Add Theme</a>
+                    <a href="#" class="list-group-item list-group-item-action position-relative">
+                    <i class="fas fa-bars me-1"></i>
+                    Extension List
+                    <span class="badge bg-pri position-absolute top-50 end-0 translate-middle-y rounded-pill">15</span>
+                    </a>
+                </div>
+                <div class="list-group list-group-flush mb-3">
+                    <a href="" class="list-group-item disabled ps-2">Manage Order</a>
+                    <a href="#" class="list-group-item list-group-item-action"><i class="fal fa-plus-circle me-1"></i>New Order</a>
+                    <a href="#" class="list-group-item list-group-item-action position-relative">
+                    <i class="fas fa-bars me-1"></i>
+                    Order List
+                    <span class="badge bg-pri position-absolute top-50 end-0 translate-middle-y rounded-pill">15</span>
+                    </a>
+                </div>
+                <div class="list-group list-group-flush mb-3">
+                    <a href="" class="list-group-item disabled ps-2">Reviews</a>
+                    <a href="#" class="list-group-item list-group-item-action"><i class="fal fa-plus-circle me-1"></i>New Review</a>
+                    <a href="#" class="list-group-item list-group-item-action position-relative">
+                    <i class="fas fa-bars me-1"></i>
+                    Review List
+                    <span class="badge bg-pri position-absolute top-50 end-0 translate-middle-y rounded-pill">15</span>
+                    </a>
+                </div>
+                <div class="list-group list-group-flush mb-3">
+                    <a href="" class="list-group-item disabled ps-2">Ban User</a>
+                    <a href="#" class="list-group-item list-group-item-action"><i class="fal fa-plus-circle me-1"></i>Ban</a>
+                    <a href="#" class="list-group-item list-group-item-action position-relative">
+                    <i class="fas fa-bars me-1"></i>
+                    Ban List
+                    <span class="badge bg-pri position-absolute top-50 end-0 translate-middle-y rounded-pill">15</span>
+                    </a>
+                </div>
+                <div class="list-group list-group-flush mb-3">
+                    <a href="" class="list-group-item disabled ps-2">Stocks</a>
+                    <a href="#" class="list-group-item list-group-item-action"><i class="fal fa-plus-circle me-1"></i>Warehouse</a>
+                    <a href="#" class="list-group-item list-group-item-action position-relative">
+                    <i class="fas fa-bars me-1"></i>
+                    Remain Stocks
+                    <span class="badge bg-pri position-absolute top-50 end-0 translate-middle-y rounded-pill">15</span>
+                    </a>
+                </div>
+                <div class="list-group list-group-flush mb-3">
+                    <a href="" class="list-group-item disabled ps-2">New users</a>
+                    <a href="#" class="list-group-item list-group-item-action"><i class="fal fa-plus-circle me-1"></i>Recently</a>
+                    <a href="#" class="list-group-item list-group-item-action position-relative">
+                    <i class="fas fa-bars me-1"></i>
+                    User List
+                    <span class="badge bg-pri position-absolute top-50 end-0 translate-middle-y rounded-pill">15</span>
+                    </a>
+                </div> -->
+                <!--span list end-->
+                <div class="list-group list-group-flush mb-3">
+                    <a href="" class="list-group-item disabled ps-2">Manage Item</a>
+                    <a href="item_add.html" class="list-group-item list-group-item-action list-active"><i class="fal fa-plus-circle me-1"></i>Add Item</a>
+                    <a href="item_list.html" class="list-group-item list-group-item-action position-relative">
+                    <i class="fas fa-bars me-1"></i>
+                    Item List
+                    <span class="badge bg-pri position-absolute top-50 end-0 translate-middle-y rounded-pill">15</span>
+                    </a>
+                </div>
+                <div class="list-group list-group-flush mb-3">
+                    <a href="" class="list-group-item disabled ps-2">Profile</a>
+                    <a href="profile.html" class="list-group-item list-group-item-action"><i class="fal fa-plus-circle me-1"></i>Update Profile</a>
+                </div>
+                <div class="list-group list-group-flush mb-3">
+                    <a href="" class="list-group-item disabled ps-2">Manage Order</a>
+                    <a href="#" class="list-group-item list-group-item-action" onclick="noti()"><i class="fal fa-plus-circle me-1"></i>New Orders</a>
+                    <a href="#" class="list-group-item list-group-item-action position-relative" onclick="noti()">
+                    <i class="fas fa-bars me-1"></i>
+                    Order List
+                    <span class="badge bg-pri position-absolute top-50 end-0 translate-middle-y rounded-pill">15</span>
+                    </a>
+                </div>
+                <div class="list-group list-group-flush mb-3">
+                    <a href="" class="list-group-item disabled ps-2">Ban User</a>
+                    <a href="#" class="list-group-item list-group-item-action" onclick="noti()"><i class="fal fa-plus-circle me-1"></i>Ban</a>
+                    <a href="#" class="list-group-item list-group-item-action position-relative" onclick="noti()">
+                    <i class="fas fa-bars me-1"></i>
+                    Ban List
+                    <span class="badge bg-pri position-absolute top-50 end-0 translate-middle-y rounded-pill">1</span>
+                    </a>
+                </div>
+                <!--list end-->
+            </div>
+            <div class="col-12 col-lg-9 col-xl-10 vh-100 content">
+                <div class="row header">
+                    <!--main's nav-->
+                    <div class="col-12">
+                        <div class="p-2 rounded bg-pri d-flex justify-content-between align-items-center shadow-sm">
+                          <button class="btn btn-light show-navigation d-xl-none">
+                            <i class="fas fa-bars"></i>
+                          </button>
+                          <form action="" method="" class="d-none d-md-block">
+                            <div class="input-group">
+                                <input type="text" class="form-control">
+                                <button class="btn btn-light rounded ms-2">
+                                  <i class="fas fa-search"></i>
+                                </button>
+                            </div>
+                          </form>
+                          <div class="dropdown">
+                            <button class="btn btn-light dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                              <img src="img/boy.jpg" alt="kmh" class="user-img">
+                              Kaung Min Htet
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                              <li><a class="dropdown-item" href="#">Action</a></li>
+                              <li><a class="dropdown-item" href="#">Another action</a></li>
+                              <li><a class="dropdown-item border-top border-1" href="#">Logout</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                </div>
+                <!--breadcrumb-->
+                <div class="row">
+                    <div class="col-12 my-3">
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb bg-white p-2 rounded">
+                              <li class="breadcrumb-item"><a href="index.html" class="text-pri text-decoration-none">Home</a></li>
+                              <li class="breadcrumb-item active" aria-current="page">Item</li>
+                            </ol>
+                          </nav>
+                    </div>
+                </div>
+                <!-- item-add part -->
+                <div class="row">
+                    <div class="col-12 col-lg-8">
+                        <div class="card border border-0 shadow-sm mb-3">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="d-flex">
+                                        <h4 class="mb-0 me-1">
+                                            <i class="fal fa-plus-circle text-pri"></i>
+                                        </h4>
+                                        <p class="h4">Add Item</p>
+                                    </div>
+                                    <a href="item_list.html" class="btn outline-pri"><i class="fal fa-bars text-pri"></i></a>
+                                </div>
+                                <hr/>
+                                <!-- form -->
+                                <form action="" method>
+                                    <div class="row">
+                                        <div class="col-12 col-md-6">
+                                            <div class="form-group">
+                                                <label for="photo" class="mb-2">Photo Upload<i class="fal fa-info-circle text-black-50 ms-1"  title="Only accept Jpg, Png"></i></label>
+                                                <input type="file" id="photo" class="form-control" title="Choose File">
+                                            </div>
+                                            <div class="form-group mt-2">
+                                                <label for="item" class="mb-2">Item Name</label>
+                                                <input type="text" id="item" class="form-control">
+                                            </div>
+                                            <div class="form-group mt-2">
+                                                <label for="type" class="mb-2">Type</label>
+                                                <select class="form-select" name="type" id="type">
+                                                    <option value="" selected disabled>Select Type</option>
+                                                    <option value="">ကုန်ကြမ်း</option>
+                                                    <option value="">ကုန်ချော</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group mt-2">
+                                                <label for="main" class="mb-2">Main Category</label>
+                                                <select class="form-select" name="main" id="main">
+                                                    <option value="" selected disabled>Select Main Category</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group mt-2">
+                                                <label for="sub" class="mb-2">Sub Category</label>
+                                                <select class="form-select" name="sub" id="sub">
+                                                    <option value="" selected disabled>Select Subcategory</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-md-6">
+                                            <div class="row">
+                                                <div class="col-6">
+                                                    <div class="form-group">
+                                                        <label for="number" class="mb-2">Item Quantity</label>
+                                                        <input type="text" id="number" class="form-control">
+                                                    </div>
+                                                </div>
+                                                <div class="col-6">
+                                                    <div class="form-group">
+                                                        <label for="unit" class="mb-2">Unit</label>
+                                                        <select class="form-select" name="unit" id="unit">
+                                                            <option value="" selected disabled>Select Unit</option>
+                                                            <option value="">ကုန်ကြမ်း</option>
+                                                            <option value="">ကုန်ချော</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group mt-2">
+                                                <label for="price" class="mb-2">Price</label>
+                                                <input type="text" id="price" class="form-control">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="desc">Description</label>
+                                                <textarea class="form-textarea rounded" name="" id="desc" cols="30" rows="10" style="border: 1px solid #6c757d50;"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                                <hr/>
+                                <!--add item button-->
+                                <button class="btn btn-primary bg-pri outline-pri button-active"><i class="fal fa-plus-circle me-1"></i>ADD ITEM</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>    
+        </div>
+        </div>
+    </section>
+
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="vendor/jquery/js/jquery-3.6.0.js"></script>
+    <script src="js/app.js"></script>
+    <script>
+
+        let category = ["Phone","TV","Computer"];
+        let subCategory = [
+            {name: "iphone",categoryId: 0},
+            {name: "mi",categoryId: 0},
+            {name: "sony",categoryId: 1},
+            {name: "hp",categoryId: 1},
+            {name: "dell",categoryId: 2},
+            {name: "mac",categoryId: 2}
+        ];
+
+        category.map(function(el,index) {
+            $("#main").append(`<option value="${index}">${el}</option>`);
+        });
+
+        subCategory.map(function(el,index) {
+            $("#sub").append(`<option value="${index}" data-category="${el.categoryId}">${el.name}</option>`);
+        });
+
+        $("#main").on("change",function() {
+            let currentCategoryId = $(this).val();
+            $("#sub option").hide();
+            $(`[data-category=${currentCategoryId}]`).show();
+        });
+
+    </script>
+    
+</body>
+</html>

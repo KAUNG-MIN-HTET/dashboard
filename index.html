@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="vendor/fontawesomepro/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+      .list-active{
+        background-color: var(--primary);
+        color: #ffffff;
+      }
+      .list-group-item:first-child {
+        border-top-left-radius: 3px;
+        border-top-right-radius: 3px;
+      }
+      .list-group-item:last-child {
+        border-bottom-right-radius: 3px;
+        border-bottom-left-radius: 3px;
+      }
+      .list-active:hover {
+        color: #ffffff;
+      }
+  </style>
+</head>
+<body>
+
+  <section class="container-fluid">
+    <div class="row">
+      <!-- navigation side-bar -->
+      <div class="col-12 col-lg-3 col-xl-2 vh-100 navigation">
+        <div class="d-flex justify-content-between align-items-center p-2 logo" style="margin-top: 8px;">
+          <p class="fw-bold m-0 h4 text-pri">Menu</p>
+          <button class="btn btn-light hide-navigation d-lg-none">
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+        <!--list start-->
+        <div class="list-group list-group-flush mb-3">
+          <a href="index.html" class="list-group-item list-active">
+            <i class="fas fa-home"></i>
+            Dashboard
+          </a>
+        </div>
+        <!--span list start-->
+        <!-- <div class="list-group list-group-flush mb-3">
+          <a href="" class="list-group-item disabled ps-2">Manage Dashboard</a>
+          <a href="#" class="list-group-item list-group-item-action"><i class="fal fa-plus-circle me-1"></i>Add Theme</a>
+          <a href="#" class="list-group-item list-group-item-action position-relative">
+            <i class="fas fa-bars me-1"></i>
+            Extension List
+            <span class="badge bg-pri position-absolute top-50 end-0 translate-middle-y rounded-pill">15</span>
+          </a>
+        </div>
+        <div class="list-group list-group-flush mb-3">
+          <a href="" class="list-group-item disabled ps-2">Manage Order</a>
+          <a href="#" class="list-group-item list-group-item-action"><i class="fal fa-plus-circle me-1"></i>New Order</a>
+          <a href="#" class="list-group-item list-group-item-action position-relative">
+            <i class="fas fa-bars me-1"></i>
+            Order List
+            <span class="badge bg-pri position-absolute top-50 end-0 translate-middle-y rounded-pill">15</span>
+          </a>
+        </div>
+        <div class="list-group list-group-flush mb-3">
+          <a href="" class="list-group-item disabled ps-2">Reviews</a>
+          <a href="#" class="list-group-item list-group-item-action"><i class="fal fa-plus-circle me-1"></i>New Review</a>
+          <a href="#" class="list-group-item list-group-item-action position-relative">
+            <i class="fas fa-bars me-1"></i>
+            Review List
+            <span class="badge bg-pri position-absolute top-50 end-0 translate-middle-y rounded-pill">15</span>
+          </a>
+        </div>
+        <div class="list-group list-group-flush mb-3">
+          <a href="" class="list-group-item disabled ps-2">Ban User</a>
+          <a href="#" class="list-group-item list-group-item-action"><i class="fal fa-plus-circle me-1"></i>Ban</a>
+          <a href="#" class="list-group-item list-group-item-action position-relative">
+            <i class="fas fa-bars me-1"></i>
+            Ban List
+            <span class="badge bg-pri position-absolute top-50 end-0 translate-middle-y rounded-pill">15</span>
+          </a>
+        </div>
+        <div class="list-group list-group-flush mb-3">
+          <a href="" class="list-group-item disabled ps-2">Stocks</a>
+          <a href="#" class="list-group-item list-group-item-action"><i class="fal fa-plus-circle me-1"></i>Warehouse</a>
+          <a href="#" class="list-group-item list-group-item-action position-relative">
+            <i class="fas fa-bars me-1"></i>
+            Remain Stocks
+            <span class="badge bg-pri position-absolute top-50 end-0 translate-middle-y rounded-pill">15</span>
+          </a>
+        </div>
+        <div class="list-group list-group-flush mb-3">
+          <a href="" class="list-group-item disabled ps-2">New users</a>
+          <a href="#" class="list-group-item list-group-item-action"><i class="fal fa-plus-circle me-1"></i>Recently</a>
+          <a href="#" class="list-group-item list-group-item-action position-relative">
+            <i class="fas fa-bars me-1"></i>
+            User List
+            <span class="badge bg-pri position-absolute top-50 end-0 translate-middle-y rounded-pill">15</span>
+          </a>
+        </div> -->
+        <!--span list end-->
+        <div class="list-group list-group-flush mb-3">
+          <a href="" class="list-group-item disabled ps-2">Manage Item</a>
+          <a href="item_add.html" class="list-group-item list-group-item-action"><i class="fal fa-plus-circle me-1"></i>Add Item</a>
+          <a href="item_list.html" class="list-group-item list-group-item-action position-relative">
+            <i class="fas fa-bars me-1"></i>
+            Item List
+            <span class="badge bg-pri position-absolute top-50 end-0 translate-middle-y rounded-pill">15</span>
+          </a>
+        </div>
+        <div class="list-group list-group-flush mb-3">
+          <a href="" class="list-group-item disabled ps-2">Profile</a>
+          <a href="profile.html" class="list-group-item list-group-item-action"><i class="fal fa-plus-circle me-1"></i>Update Profile</a>
+        </div>
+        <div class="list-group list-group-flush mb-3">
+          <a href="" class="list-group-item disabled ps-2">Manage Order</a>
+          <a href="#" class="list-group-item list-group-item-action" onclick="noti()"><i class="fal fa-plus-circle me-1"></i>New Orders</a>
+          <a href="#" class="list-group-item list-group-item-action position-relative" onclick="noti()">
+            <i class="fas fa-bars me-1"></i>
+            Order List
+            <span class="badge bg-pri position-absolute top-50 end-0 translate-middle-y rounded-pill">15</span>
+          </a>
+        </div>
+        <div class="list-group list-group-flush mb-3">
+          <a href="" class="list-group-item disabled ps-2">Ban User</a>
+          <a href="#" class="list-group-item list-group-item-action" onclick="noti()"><i class="fal fa-plus-circle me-1"></i>Ban</a>
+          <a href="#" class="list-group-item list-group-item-action position-relative" onclick="noti()">
+            <i class="fas fa-bars me-1"></i>
+            Ban List
+            <span class="badge bg-pri position-absolute top-50 end-0 translate-middle-y rounded-pill">1</span>
+          </a>
+        </div>
+        <!--list end-->
+      </div>
+      <!-- main -->
+      <div class="col-12 col-lg-9 col-xl-10 vh-100 content">
+        <div class="row header">
+          <!-- main's nav -->
+          <div class="col-12">
+            <div class="p-2 rounded bg-pri d-flex justify-content-between align-items-center shadow-sm">
+              <button class="btn btn-light show-navigation d-xl-none">
+                <i class="fas fa-bars"></i>
+              </button>
+              <form action="" method="" class="d-none d-md-block">
+                <div class="input-group">
+                    <input type="text" class="form-control">
+                    <button class="btn btn-light rounded ms-2">
+                      <i class="fas fa-search"></i>
+                    </button>
+                </div>
+              </form>
+              <div class="dropdown">
+                <button class="btn btn-light dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                  <img src="img/boy.jpg" alt="kmh" class="user-img">
+                  Kaung Min Htet
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><a class="dropdown-item border-top border-1" href="#">Logout</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- count numbers part -->
+        <div class="row">
+          <div class="col-12 col-md-6 col-xl-3">
+            <div class="card my-3 status-card" onclick="go('https://google.com')">
+              <div class="card-body">
+                  <div class="row">
+                    <div class="col-4 d-flex align-items-center">
+                      <i class="fas fa-list text-pri h1 mb-0"></i>
+                    </div>
+                    <div class="col-8">
+                      <p class="mb-2 h4 fw-bolder">
+                        <span class="counter-up">123</span>
+                      </p>
+                      <p class="mb-0 text-black-50">Today Order</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </div>
+          <div class="col-12 col-md-6 col-xl-3">
+            <div class="card my-3 status-card" onclick="go('https://google.com')">
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-4 d-flex align-items-center">
+                    <i class="fas fa-user text-pri h1 mb-0"></i>
+                  </div>
+                  <div class="col-8">
+                    <p class="mb-2 h4 fw-bolder">
+                      <span class="counter-up">456</span>
+                    </p>
+                    <p class="mb-0 text-black-50">Today Users</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-xl-3">
+            <div class="card my-3 status-card" onclick="go('item_list.html')">
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-4 d-flex align-items-center">
+                    <i class="fas fa-box text-pri h1 mb-0"></i>
+                  </div>
+                  <div class="col-8">
+                    <p class="mb-2 h4 fw-bolder">
+                      <span class="counter-up">123</span>
+                    </p>
+                    <p class="mb-0 text-black-50">Today Items</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-xl-3">
+            <div class="card my-3 status-card" onclick="go('https://google.com')">
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-4 d-flex align-items-center">
+                    <i class="fas fa-location text-pri h1 mb-0"></i>
+                  </div>
+                  <div class="col-8">
+                    <p class="mb-2 h4 fw-bolder">
+                      <span class="counter-up">12</span>
+                    </p>
+                    <p class="mb-0 text-black-50">Support Locations</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row align-items-end">
+          <!-- line-chart -->
+          <div class="col-12 col-lg-7">
+            <div class="card shadow-sm mb-3">
+              <div class="card-body">
+                <div class="d-flex justify-content-between">
+                  <h4>Order & Viewers</h4>
+                  <div class="image">
+                    <img src="img/user1.jpg" class="shadow-sm" alt="user1">
+                    <img src="img/user2.jpg" class="shadow-sm" alt="user2">
+                    <img src="img/user3.jpg" class="shadow-sm" alt="user3">
+                    <img src="img/user4.jpg" class="shadow-sm" alt="user4">
+                    <img src="img/user5.jpg" class="shadow-sm" alt="user5">
+                  </div>
+                </div>
+                <canvas id="ov" width="400" height="150"></canvas>
+              </div>
+            </div>
+          </div>
+          <!-- carousel item -->
+          <div class="col-12 col-md-6 col-lg-5">
+            <div class="card mt-lg-0 shadow-sm mb-3 mb-md-0 mb-lg-3" style="margin-top: 60px">
+              <div id="carouselExampleIndicators" class="carousel slide item-card-carousel" data-bs-ride="carousel">
+                <div class="carousel-indicators" style="bottom: -10px">
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active bg-secondary" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" class="bg-secondary" aria-label="Slide 2"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" class="bg-secondary" aria-label="Slide 3"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" class="bg-secondary" aria-label="Slide 4"></button>
+                </div>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <div class="card-body">
+                      <div class="item-card d-flex justify-content-between align-items-center">
+                        <div class="mt-5 w-50">
+                          <h4 class="fw-bold">Coffee Cup</h4>
+                          <small class="mb-2 d-inline-block text-black-50">1500 MMK</small>
+                          <div class="progress">
+                            <div class="progress-bar progress-bar-striped w-50 bg-pri"></div>
+                          </div>
+                        </div>
+                        <img src="img/item1.png" alt="item1">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="card-body">
+                      <div class="item-card d-flex justify-content-between align-items-center">
+                        <div class="mt-5 w-50">
+                          <h4 class="fw-bold">Stick</h4>
+                          <small class="mb-2 d-inline-block text-black-50">12000 MMK</small>
+                          <div class="progress">
+                            <div class="progress-bar progress-bar-striped w-100 bg-pri"></div>
+                          </div>
+                        </div>
+                        <img src="img/item2.png" alt="item2">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="card-body">
+                      <div class="item-card d-flex justify-content-between align-items-center">
+                        <div class="mt-5 w-50">
+                          <h4 class="fw-bold">Book</h4>
+                          <small class="mb-2 d-inline-block text-black-50">5000 MMK</small>
+                          <div class="progress">
+                            <div class="progress-bar progress-bar-striped w-25 bg-pri"></div>
+                          </div>
+                        </div>
+                        <img src="img/item3.png" alt="item3">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="card-body">
+                      <div class="item-card d-flex justify-content-between align-items-center">
+                        <div class="mt-5 w-50">
+                          <h4 class="fw-bold">Name Card</h4>
+                          <small class="mb-2 d-inline-block text-black-50">4000 MMK</small>
+                          <div class="progress">
+                            <div class="progress-bar progress-bar-striped w-75 bg-pri"></div>
+                          </div>
+                        </div>
+                        <img src="img/item4.png" alt="item4">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- doughnut chart-->
+          <div class="col-12 col-md-6 col-lg-5">
+            <div class="card shadow-sm mb-3">
+              <div class="card-body">
+                <div class="d-flex justify-content-between">
+                  <h4>Order & Places</h4>
+                  <div class="icon">
+                    <i class="fas fa-chart-pie h4 mb-0 text-pri"></i>
+                  </div>
+                </div>
+                <div class="">
+                  <canvas id="opChart" width="200" height="200"></canvas>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- order-table -->
+          <div class="col-12 col-md-12 col-lg-7">
+            <div class="card shadow-sm mt-3 mt-lg-0 mb-3">
+              <div class="d-flex justify-content-between align-items-center py-2 border-bottom border-1">
+                <p class="mb-0 ps-2">Order Items</p>
+                <div class="icon pe-4">
+                  <i class="fas fa-ellipsis-v h6 mb-0 text-pri"></i>
+                </div>
+              </div>
+              <table class="table table-hover my-table">
+                <thead>
+                <tr class="table100-head">
+                  <th class="column1">Date</th>
+                  <th class="column2">Order ID</th>
+                  <th class="column3">Name</th>
+                  <th class="column4">Price</th>
+                  <th class="column5">Quantity</th>
+                  <th class="column6">Total</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                  <td class="column1">2017-09-29</td>
+                  <td class="column2">200398</td>
+                  <td class="column3">iPhone X 64Gb Grey</td>
+                  <td class="column4">$999.00</td>
+                  <td class="column5 text-center">1</td>
+                  <td class="column6">$999.00</td>
+                </tr>
+                <tr>
+                  <td class="column1">2017-09-28</td>
+                  <td class="column2">200397</td>
+                  <td class="column3">Samsung S8 Black</td>
+                  <td class="column4">$756.00</td>
+                  <td class="column5 text-center">1</td>
+                  <td class="column6">$756.00</td>
+                </tr>
+                <tr>
+                  <td class="column1">2017-09-24</td>
+                  <td class="column2">200391</td>
+                  <td class="column3">Smartwatch 4.0 LTE Wifi</td>
+                  <td class="column4">$199.00</td>
+                  <td class="column5 text-center">6</td>
+                  <td class="column6">$1494.00</td>
+                </tr>
+                <tr>
+                  <td class="column1">2017-09-23</td>
+                  <td class="column2">200390</td>
+                  <td class="column3">Camera C430W 4k</td>
+                  <td class="column4">$699.00</td>
+                  <td class="column5 text-center">1</td>
+                  <td class="column6">$699.00</td>
+                </tr>
+                <tr>
+                  <td class="column1">2017-09-22</td>
+                  <td class="column2">200389</td>
+                  <td class="column3">Macbook Pro Retina 2017</td>
+                  <td class="column4">$2199.00</td>
+                  <td class="column5 text-center">1</td>
+                  <td class="column6">$2199.00</td>
+                </tr>
+                <tr>
+                  <td class="column1">2017-09-21</td>
+                  <td class="column2">200388</td>
+                  <td class="column3">Game Console Controller</td>
+                  <td class="column4">$999.00</td>
+                  <td class="column5 text-center">1</td>
+                  <td class="column6">$999.00</td>
+                </tr>
+                <tr>
+                  <td class="column1">2017-09-19</td>
+                  <td class="column2">200387</td>
+                  <td class="column3">iPhone X 64Gb Grey</td>
+                  <td class="column4">$999.00</td>
+                  <td class="column5 text-center">1</td>
+                  <td class="column6">$999.00</td>
+                </tr>
+                <tr>
+                  <td class="column1">2017-09-21</td>
+                  <td class="column2">200388</td>
+                  <td class="column3">Game Console Controller</td>
+                  <td class="column4">$999.00</td>
+                  <td class="column5 text-center">1</td>
+                  <td class="column6">$999.00</td>
+                </tr>
+                <tr>
+                  <td class="column1">2017-09-19</td>
+                  <td class="column2">200387</td>
+                  <td class="column3">iPhone X 64Gb Grey</td>
+                  <td class="column4">$999.00</td>
+                  <td class="column5 text-center">1</td>
+                  <td class="column6">$999.00</td>
+                </tr>
+                <tr>
+                  <td class="column1">2017-09-18</td>
+                  <td class="column2">200386</td>
+                  <td class="column3">iPhone X 64Gb Grey</td>
+                  <td class="column4">$999.00</td>
+                  <td class="column5 text-center">1</td>
+                  <td class="column6">$999.00</td>
+                </tr>
+
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="vendor/jquery/js/jquery-3.6.0.js"></script>
+  <script src="vendor/waypoint/jquery.waypoints.min.js"></script>
+  <script src="vendor/counterup/counterup.min.js"></script>
+  <script src="vendor/chartjs/chart.min.js"></script>
+  <script src="js/app.js"></script>
+
+</body>
+</html>
